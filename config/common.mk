@@ -145,7 +145,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     vendor/google/system/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/google/system/etc/permissions/features.xml:system/etc/permissions/features.xml \
-    vendor/google/system/etc/permissions/preferred-apps/google.xml:system/etc/permissions/preferred-apps/google.xml \
+    vendor/google/system/etc/preferred-apps/google.xml:system/etc/preferred-apps/google.xml \
     vendor/google/system/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
     vendor/google/system/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
     vendor/google/system/framework/com.google.android.camera2.jar:system/framework/com.google.android.camera2.jar \

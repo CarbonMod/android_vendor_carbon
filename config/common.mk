@@ -1,5 +1,5 @@
 # brand
-PRODUCT_BRAND ?= Carbon
+PRODUCT_BRAND ?= CarbonMod
 
 # SuperUser
 SUPERUSER_EMBEDDED := true
@@ -72,9 +72,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Camera \
     Development \
-    CMFileManager \
-    Galaxy4 \
-    HoloSpiralWallpaper \
     LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
@@ -87,17 +84,12 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     Superuser \
     su \
-    Torch \
     VisualizationWallpapers \
-    VoicePlus \
     libemoji
 
 # carbon packages
 PRODUCT_PACKAGES += \
     BlueBalls \
-    CarbonAbout \
-    CarbonDelta \
-    ROMStats \
     Wallpapers
 
 # dsp manager
@@ -210,28 +202,20 @@ endif
 # Set Unofficial if no buildtype set (Buildtype should ONLY be set by Carbon Devs!)
 ifdef CARBON_BUILDTYPE
 else
-    CARBON_BUILDTYPE := UNOFFICIAL
+    CARBON_BUILDTYPE := OFFICIAL
     CARBON_VERSION_MAJOR :=
     CARBON_VERSION_MINOR :=
 endif
 
 # Set Carbon version
 ifdef CARBON_RELEASE
-    CARBON_VERSION := "CARBON-KK-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
+    CARBON_VERSION := "CarbonMod-KitKat-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
-    CARBON_VERSION := "CARBON-KK-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+    CARBON_VERSION := "CarbonMod-KitKat-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.carbon.version=$(CARBON_VERSION)
-
-# ROM Statistics and ROM Identification
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.romstats.askfirst=1 \
-ro.romstats.ga=UA-43747246-1 \
-ro.romstats.name=CarbonRom- \
-ro.romstats.url=http://stats.carbon-rom.com \
-ro.romstats.version=$(CARBON_VERSION)
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false

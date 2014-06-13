@@ -76,10 +76,9 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
-    MagicSmokeWallpapers \
+    Torch \
     NoiseField \
     OmniSwitch \
-    PhaseBeam \
     PhotoTable \
     SoundRecorder \
     Superuser \
@@ -262,3 +261,4 @@ $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12.mk)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
+

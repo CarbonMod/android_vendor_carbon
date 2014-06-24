@@ -88,12 +88,10 @@ PRODUCT_PACKAGES += \
 
 # carbon packages
 PRODUCT_PACKAGES += \
-    BlueBalls \
-    Wallpapers
+    BlueBalls
 
 # dsp manager
 PRODUCT_PACKAGES += \
-    DSPManager \
     audio_effects.conf \
     libcyanogen-dsp
 
@@ -242,7 +240,7 @@ endif
 ifdef CARBON_RELEASE
     CARBON_VERSION := "CarbonMod-KitKat-v"$(CARBON_VERSION_MAJOR).$(CARBON_VERSION_MINOR)
 else
-    CARBON_VERSION := "CarbonMod-KitKat-$(CARBON_BUILDTYPE)"-$(shell date +%Y%m%d-%H%M)
+    CARBON_VERSION := "CarbonMod-KitKat-$(CARBON_BUILDTYPE)"-$(shell date +%d%m%Y-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -252,13 +250,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
 # Audio
-$(call inherit-product-if-exists, frameworks/base/data/sounds/OldAudio.mk)
 $(call inherit-product-if-exists, frameworks/base/data/sounds/NewAudio.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageNewWave.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage9.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12.mk)
-$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
 
